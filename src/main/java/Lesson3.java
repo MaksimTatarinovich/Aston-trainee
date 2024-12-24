@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Lesson3 {
 
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class Lesson3 {
         invertArray();
         fillArray(100);
         multiplyLessThanSix();
-        fillDiagonalElements(5);
+        fillDiagonalElements(7);
         createArrayWithInitialValue(5, 3);
     }
 
@@ -33,7 +35,7 @@ public class Lesson3 {
         int value = 100;
         if (value <= 0)
             System.out.println("Красный\n");
-            else if (value > 0 && value <= 100)
+            else if (value <= 100)
             System.out.println("Жёлтый\n");
             else
             System.out.println("Зелёный\n");
@@ -63,9 +65,6 @@ public class Lesson3 {
     }
 
     public static void printStringNTimes(String string, int number) {
-       /*  for(int i = 0; i < number; i++)
-            System.out.println(string);
-       */
         int i = 0;
         do {
             System.out.println(string);
@@ -134,13 +133,15 @@ public class Lesson3 {
 
     public static void fillDiagonalElements(int n) {
         int[][] array = new int[n][n];
-        for(int i = 0; i < n; i++){
-            for (int j = 0; j < n; j++) {
-                array[i][i] = 1;
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
+        for (int i = 0; i < n; i++) {
+            array[i][i] = 1;
+            array[i][n - 1 - i] = 1;
         }
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(Arrays.toString(array[i]));
+        }
+
         System.out.println();
     }
 
