@@ -1,6 +1,6 @@
 package lesson_5.exercise_1;
 
-public class Lesson_5 {
+public class Main {
     public static void main(String[] args){
 
         Dog dogBarsik = new Dog("Барсик");
