@@ -1,8 +1,7 @@
-import jdk.jfr.Description;
 import lesson_13.Factorial;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import static org.testng.Assert.assertEquals;
 
 public class FactorialTest {
     Factorial factorial = new Factorial();
@@ -18,19 +17,16 @@ public class FactorialTest {
         softAssert.assertAll();
     }
 
-    @Description("Факториал нуля")
     @Test
     public void testFactorialOfZero() {
-        assertEquals(1, factorial.calculateFactorial(0), "Факториал 0 должен быть равен 1");
+        Assert.assertEquals(1, factorial.calculateFactorial(0), "Факториал 0 должен быть равен 1");
     }
 
-    @Description("Факториал отрицальтельного числа")
     @Test(expectedExceptions = IllegalArgumentException.class)
     public void testFactorialOfNegativeNumber() {
         factorial.calculateFactorial(-1);
     }
 
-    @Description("Передача символа")
     @Test(expectedExceptions = IllegalArgumentException.class)
     public void testInputChar() {
         factorial.calculateFactorial('a');
