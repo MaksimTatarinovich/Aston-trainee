@@ -1,3 +1,5 @@
+package lesson_13_tests;
+
 import static org.junit.jupiter.api.Assertions.*;
 import lesson_13.Factorial;
 import org.junit.jupiter.api.DisplayName;
