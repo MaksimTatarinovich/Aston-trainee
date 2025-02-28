@@ -44,7 +44,7 @@ public class RestAssuredTest {
     @Test
     public void postFormData(){
         given().baseUri(baseURI)
-                .contentType(ContentType.URLENC)
+                .contentType("application/x-www-form-urlencoded; charset=UTF-8")
                 .formParam("foo1", "bar1")
                 .formParam("foo2", "bar2")
                 .when().post("/post")

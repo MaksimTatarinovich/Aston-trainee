@@ -1,5 +1,8 @@
 package lesson_15_tests;
 
+import io.qameta.allure.Link;
+import io.qameta.allure.Owner;
+import jdk.jfr.Description;
 import lesson_15.*;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.TimeoutException;
@@ -7,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -36,6 +38,9 @@ public class MTSTest {
     }
 
     @DisplayName("ѕроверка названи€ блока")
+    @Description("Ётот тест провер€ет название блока")
+    @Owner("Maksim Tatarinovich")
+    @Link(name = "github", url = "https://github.com/MaksimTatarinovich")
     @Test
     public void checkNameOfBlock() {
         assertEquals(mtsMainPage.getRefillBlock().getText(), mtsData.getNameOfBlock());
@@ -50,6 +55,9 @@ public class MTSTest {
     }
 
     @DisplayName("ѕроверка работы ссылки <<ѕодробнее о сервисе>>")
+    @Description("Ётот тест провер€ет работоспособность ссылки <<ѕодробнее о сервисе>>")
+    @Owner("Maksim Tatarinovich")
+    @Link(name = "github", url = "https://github.com/MaksimTatarinovich")
     @Test
     public void checkLinkAboutService() {
         mtsMainPage.clickAboutButton();
