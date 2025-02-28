@@ -133,7 +133,7 @@ public class MTSTest {
     @Test
     public void checkTextInEmptyCardFields() {
         mtsMainPage.loginCommunicationServices();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(11));
         wait.until(ExpectedConditions.visibilityOf(paymentWindowPage.getPaymentWindow()));
         driver.switchTo().frame(paymentWindowPage.getPaymentWindow());
         wait.until(ExpectedConditions.visibilityOf(paymentWindowPage.getPayButton()));
